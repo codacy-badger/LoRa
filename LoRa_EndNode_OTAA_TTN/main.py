@@ -5,7 +5,6 @@ from pysense import Pysense
 from SI7006A20 import SI7006A20
 import socket
 import binascii
-import struct
 import time
 import config
 import pycom
@@ -64,7 +63,6 @@ while True:
         print('Sending:', pkt)
         #socket envia a mensagem criada
         s.send(pkt)
-        
         time.sleep(5)
 
         pycom.heartbeat(True)
